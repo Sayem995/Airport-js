@@ -1,8 +1,9 @@
 describe('Airport', function() {
-  var plane = new Plane();
+      
+   var plane = new Plane();
 
   it("expects plane to land at an airport", function() {
-    plane.land
-    expect(landed).toBe(true);
+    Plane.land();
+    expect(Plane.landed()).toBe(true);
   });
-  });
+});
