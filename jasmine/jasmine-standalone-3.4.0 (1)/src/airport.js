@@ -1,9 +1,12 @@
-function Plane() {
-  var in_airport = false;
-  Plane.land = function() {
-    in_airport = true;
- }
- Plane.landed = function() {
-   return in_airport;
- }
+'use strict';
+
+function Airport(){
+  this._hangar = [];
 }
+Airport.prototype.planes = function(){ return this._hangar; };
+Airport.prototype.clearForLanding = function(plane) {
+  this._hangar.push(plane);
+Airport.prototype.clearForTakeOff = function(plane) {
+  this._hangar = [];
+};
+};
